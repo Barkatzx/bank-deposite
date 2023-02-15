@@ -15,15 +15,19 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
         const withdrawTotalElement = document.getElementById('total-withdraw');
         const previousWithdrawTotalString = withdrawTotalElement.innerText;
         const previousWithdrawTotal = parseFloat(previousWithdrawTotalString);
-        // Step 04: Addition
-        const currentWithdrawTotal = previousWithdrawTotal - newWithdrawAmount;
-        withdrawTotalElement.innerText = currentWithdrawTotal;
     
     // Step 05: Get Total Balance Update Amount
     
     const balanceTotalElement = document.getElementById('total-balance');
     const previousBalanceTotalString = balanceTotalElement.innerText;
     const previousBalanceTotal = parseFloat(previousBalanceTotalString);
+    if(newWithdrawAmount > previousBalanceTotal){
+        alert('Your Balance Is Not Sufficient')
+        return;
+    }
+// Step 04: Addition
+const currentWithdrawTotal =                previousWithdrawTotal + newWithdrawAmount;
+withdrawTotalElement.innerText = currentWithdrawTotal;
     
     // Step 06: Calculate Current Total Balance
     
@@ -31,6 +35,5 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
     balanceTotalElement.innerText = currentBalanceTotal;
     
     // Step 06: Clear The Deposit Field
-        depositField.value = '';
         withdrawField.value = '';
     })
