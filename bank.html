@@ -14,10 +14,41 @@
             <span class="font-semibold text-indigo-800">Bank Deposit</span></h1>
     </header>
     <main>
-
+        <section class="mt-12">
+            <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto text-white text-center">
+                <div class="bg-violet-600 rounded-xl p-8">
+                    <h2 class="font-semibold text-xl">Deposit</h2>
+                    <h4 class="text-4xl font-semibold">$<span id="deposit-total">00</span></h4>
+                </div>
+                <div class="bg-emerald-600 rounded-xl p-8">
+                    <h2 class="font-semibold text-xl">Withdraw</h2>
+                    <h4 class="text-4xl font-semibold">$<span id="total-withdraw">300</span></h4>
+                </div>
+                <div class="bg-blue-600 rounded-xl p-8">
+                    <h2 class="font-semibold text-xl">Balance</h2>
+                    <h4 class="text-4xl font-semibold">$<span id="total-balance">1240</span></h4>
+                </div>
+            </div>
+        </section>
+<!-- Withdraw And Deposit Input Field Here -->
+<section class="mt-12">
+    <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto text-white">
+        <div class="bg-fuchsia-600 rounded-xl p-8">
+            <h2 class="font-semibold text-xl pb-2">Please Deposit</h2>
+            <input class="w-9/12 h-10 mb-2 rounded-md block px-3 text-black" type="number" id="deposit-field" placeholder="Deposit Your Amount $">
+            <button id="btn-deposit" class="bg-indigo-600 hover:bg-blue-600 px-8 py-2 rounded-md font-semibold">Deposit</button>
+        </div>
+        <div class="bg-rose-600 rounded-xl p-8">
+            <h2 class="font-semibold text-xl pb-2">Please Withdraw</h2>
+            <input class="w-9/12 h-10 mb-2 rounded-md block px-3 text-black" type="number" id="withdraw-field" placeholder="Withdraw Your Amount $">
+            <button id="btn-withdraw" class="bg-emerald-600 hover:bg-sky-600 px-8 py-2 rounded-md font-semibold">Withdraw</button>
+        </div>
+    </div>
+</section>
     </main>
 
     <!-- Javascript Link Added Here -->
-    <script src=""></script>
+    <script src="js/deposit.js"></script>
+    <script src="js/withdraw.js"></script>
 </body>
 </html>

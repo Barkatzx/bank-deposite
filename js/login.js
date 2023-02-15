@@ -10,9 +10,9 @@ document.getElementById('btn-submit').addEventListener('click', function(){
 //DANGER: Do Not Verify Password On The Client Side
 // Step 04: Verify Email And Password
     if(email === 'barkat@ph.com' && pass === 'secret'){
-        console.log('Valid User');
+        window.location.href = 'bank.html'
     }
     else{
-        console.log('Invalid User');
+        alert('Your Email and Password is Incorrect')
     }
 })
